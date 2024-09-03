@@ -1,4 +1,5 @@
 import React from "react";
+import Frutas from "./frutas";
 
 //include images into your bundle
 import rigoImage from "../../img/rigo-baby.jpg";
