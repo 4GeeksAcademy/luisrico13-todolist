@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-
+ 
 const Todolist = () =>{
     const [inputValue, setInputValue] = useState ('');
     const [todos, setTodos] = useState ([]);
@@ -23,8 +23,17 @@ const Todolist = () =>{
                 value= {inputValue}
                  />
             </li>
-            {todos.map ((t)=>(
-                <li>{t}</li>
+            {todos.map ((t , index)=>(
+                <li>{t} 
+                <i class="fas fa-trash-alt"
+                    onClick={()=>
+                        setTodos(
+                            todos.filter(
+                                (t,currentIndex) =>
+                                    index != currentIndex
+                                        )
+                                )
+                                }></i></li>
             ))}
             
             
